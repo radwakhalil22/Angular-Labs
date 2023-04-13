@@ -1,0 +1,10 @@
+.parent{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: column;
+}
+
+app-first{
+  margin-top: -50px;
+}

@@ -1,0 +1,12 @@
+<span>Add Your Caption!</span>
+<input type="text" [(ngModel)]="userInput"  class="input"/>
+<div class="userInput">
+  <p>{{userInput}}</p>
+</div>
+<div class="btns">
+  <input type="button" class="box" value="Add Caption" (click)="saveValue()">
+  <input type="button" class="box" value="Reset"  (click)="resetValue()">
+</div>
+<div class="caption">
+  <p>{{caption}}</p>
+</div>

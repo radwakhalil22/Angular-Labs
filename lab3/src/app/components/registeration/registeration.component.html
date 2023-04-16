@@ -1,0 +1,16 @@
+<!-- <div class="regform">
+  <input type="text"  placeholder="name" [(ngModel)]="studentName" [ngClass]="{'right': studentName.length > 3, 'wrong': studentName.length <= 3 && studentName} ">
+  <input type="text"  placeholder="age" [(ngModel)]="studentAge"      [ngClass]="{ 'right': +studentAge > 20 && +studentAge < 40 && studentAge, 'wrong': (+studentAge <= 20 || +studentAge >= 40) && studentAge }">
+
+  <input type="button" value="Add" (click)="SendDataToparent()">
+</div> -->
+
+
+<div class="login">
+	<h1>Registeration form</h1>
+    <div>
+    	  <input type="text"  placeholder="name" [(ngModel)]="studentName" [ngClass]="{'right': studentName.length > 3, 'wrong': studentName.length <= 3 && studentName} ">
+        <input type="text"  placeholder="age" [(ngModel)]="studentAge"      [ngClass]="{ 'right': +studentAge > 20 && +studentAge < 40 && studentAge, 'wrong': (+studentAge <= 20 || +studentAge >= 40) && studentAge }">
+        <input type="button" class="formbutton" value="Add" (click)="SendDataToparent()">
+    <div>
+</div>

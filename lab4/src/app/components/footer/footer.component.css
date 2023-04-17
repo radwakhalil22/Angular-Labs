@@ -1,0 +1,13 @@
+.footer-06 {
+    padding-top: 0 !important;
+    background: #302939;
+    overflow: hidden;
+    z-index: 0;
+    color: white;
+}
+
+
+a{
+  text-decoration: none;
+  color: white;
+}

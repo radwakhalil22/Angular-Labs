@@ -1,0 +1,26 @@
+<form  (ngSubmit)="Add(name.value, username.value, email.value, phone.value, address.value);reset()">
+  <div class="mb-3">
+    <label for="student-name" class="form-label">Name</label>
+    <input (input)="name" #test #name type="text" class="form-control" id="student-name" aria-describedby="emailHelp">
+  </div>
+  <div class="mb-3">
+    <label for="username" class="form-label">UserName</label>
+    <input (input)="username" #test #username type="text" class="form-control" id="username" aria-describedby="emailHelp">
+  </div>
+  <div class="mb-3">
+    <label for="exampleInputEmail1" class="form-label">Email address</label>
+    <input (input)="email" #test #email type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+  </div>
+  <div class="mb-3">
+    <label for="phone" class="form-label">Phone</label>
+    <input (input)="phone" #test #phone type="text" class="form-control" id="phone" aria-describedby="emailHelp">
+  </div>
+  <div class="mb-3">
+    <label for="address" class="form-label">address</label>
+    <input (input)="address" #test #address type="text" class="form-control" id="address" aria-describedby="emailHelp">
+  </div>
+  <button type="submit" class="btn btn-primary">Submit</button>
+  <div class="alert alert-success d-flex justify-content-center" *ngIf="isAdded">
+    <p>Student Added Successfully!</p>
+  </div>
+</form>

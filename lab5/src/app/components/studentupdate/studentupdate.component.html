@@ -1,0 +1,79 @@
+<div class="container w-50" *ngIf="updateStudent; else falseBlock">
+  <h1>Student Number {{ ID }}</h1>
+  <div class="" *ngIf="isUpdated">
+    <p class="alert alert-success p-2">Student Updated successfully</p>
+  </div>
+  <form
+    (ngSubmit)="
+      update(name.value,username.value, email.value, phone.value, address.value)
+    "
+  >
+    <div class="form-group m-2">
+      <label for="name">Name</label>
+      <input
+        #name
+        type="text"
+        class="form-control"
+        id="name"
+        placeholder="Enter name"
+        value="{{ updateStudent.name }}"
+      />
+    </div>
+    <div class="form-group m-2">
+      <label for="name">Username</label>
+      <input
+        #username
+        type="text"
+        class="form-control"
+        id="username"
+        placeholder="Enter username"
+        value="{{ updateStudent.username }}"
+      />
+    </div>
+    <div class="form-group m-2">
+      <label for="email">Email address</label>
+      <input
+        #email
+        type="email"
+        class="form-control"
+        id="email"
+        placeholder="Enter email"
+        value="{{ updateStudent.email }}"
+      />
+    </div>
+    <div class="form-group m-2">
+      <label for="phone">Phone number</label>
+      <input
+        #phone
+        type="tel"
+        class="form-control"
+        id="phone"
+        placeholder="Enter phone number"
+        value="{{ updateStudent.phone }}"
+      />
+    </div>
+    <div class="form-group m-2">
+      <label for="address">Address</label>
+      <textarea
+        #address
+        class="form-control"
+        id="address"
+        rows="3"
+        placeholder="Enter address"
+        >{{ updateStudent.address.city }}</textarea
+      >
+    </div>
+    <button type="submit" class="btn btn-primary m-2">Update</button>
+  </form>
+</div>
+
+<ng-template #falseBlock>
+  <div
+    style="height: 20vh"
+    class="d-flex justify-content-center align-items-center"
+  >
+    <div class="spinner-border" role="status">
+      <span class="sr-only">Loading...</span>
+    </div>
+  </div>
+</ng-template>
